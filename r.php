@@ -25,6 +25,7 @@ if (isset($_GET["link"]) && preg_match('/^[a-zA-Z0-9\-\_]+$/', $_GET['link'])) {
     
     // リンク
     header("Location:" . $value["rdUri"], 301);
+    exit;
   
   } catch(PDOException $e) {
     echo $e->getMessage();
